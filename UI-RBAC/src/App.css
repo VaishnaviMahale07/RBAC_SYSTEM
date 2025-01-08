@@ -1,0 +1,105 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body,
+html {
+  height: 100%;
+  overflow: auto;
+}
+
+.socialDivider {
+  border-bottom: 1px solid #979faf;
+  line-height: 0.1em;
+  margin: 16px 0 20px 10%;
+  text-align: center;
+  width: 80%;
+}
+.chatBackground {
+  margin: 0;
+  padding: 0;
+  background-image: url("assets/background.jpg"); /* Replace with your image URL */
+  background-size: cover; /* Ensures the image covers the whole element */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  background-position: center; /* Centers the image */
+  height: 100vh;
+  /* Sets the height to the full viewport height */
+  width: 100vw; /* Sets the width to the full viewport width */
+}
+.socialDivider span {
+  background: #fff;
+  color: #273239;
+  font-size: 14px;
+  padding: 0 20px;
+}
+
+.video-container {
+  top: 0;
+  left: 0;
+  position: fixed;
+  height: 100vw; /* Make container fill the entire viewport */
+  width: 100vw; /* Ensure full width of the viewport */
+  overflow: hidden;
+}
+
+#background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%; /* Full width of the container */
+  height: 100vh; /* Full height of the container */
+  object-fit: cover; /* Scale the video to cover the container without distortion */
+  z-index: -1;
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  color: white;
+}
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  background: "red";
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
